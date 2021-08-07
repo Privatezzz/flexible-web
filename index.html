@@ -10,8 +10,26 @@
         function toggleLnb() {
             const lnb = document.querySelector('.lnb');
             const arrow = document.querySelector('.lnb__btn > img');
-            lnb.classList.toggle('display-none');
-            arrow.classList.toggle('rotate-arrow');
+            document.addEventListener('click', (e) => {
+                const targetBtn = e.target.className;
+                const lnbMobile = document.querySelector('.lnb-mobile');
+                const lnbBtnClose = document.querySelector('.lnb__btn-mobile-close');
+                const lnbMobileBg = document.querySelector('.lnb-moblie-bg');
+                if (targetBtn == 'lnb__btn') {
+                    lnb.classList.toggle('display-none');
+                    arrow.classList.toggle('rotate-arrow');
+                } else if (targetBtn == 'header__btn-lnb--mobile') {
+                    lnb.classList.toggle('display-none');
+                    lnb.classList.toggle('lnb-mobile');
+                    lnbBtnClose.classList.toggle('display-none');
+                    lnbMobileBg.classList.toggle('display-none');
+                } else if (targetBtn == 'lnb__btn-mobile-close') {
+                    lnb.classList.toggle('display-none');
+                    lnb.classList.toggle('lnb-mobile');
+                    lnbBtnClose.classList.toggle('display-none');
+                    lnbMobileBg.classList.toggle('display-none');
+                }
+            });
         }
 
         function tabActive() {
@@ -41,7 +59,7 @@
             <a href="index.html" target="blank">
                 <h1 class="header__logo img-font"></h1>
             </a>
-            <button class="header__btn-lnb--mobile">
+            <button class="header__btn-lnb--mobile" onclick="toggleLnb()">
                 <div class="btn-burger"></div>
                 <div class="btn-burger btn-burger-center-line"></div>
                 <div class="btn-burger"></div>
@@ -64,7 +82,12 @@
                     <li class="lnb__tag03 img-font"></li>
                     <li class="lnb__tag04 img-font"></li>
                 </ul>
+                <button class="lnb__btn-mobile-close display-none">
+                    <div></div>
+                    <div></div>
+                </button>
             </aside>
+            <div class="lnb-moblie-bg display-none"></div>
             <button class="lnb__btn" onclick="toggleLnb()">
                 <img src="imgs/pc/toggle_arrow.png" alt="toggle arrow">
             </button>
