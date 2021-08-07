@@ -379,9 +379,9 @@ ul {
     transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .post__banner-img,
