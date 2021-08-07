@@ -253,7 +253,7 @@ ul {
 }
 
 .post__box {
-    margin: 29px 0 0 37px;
+    margin: 30px 0 0 38px;
 }
 
 .post__title {
@@ -266,7 +266,7 @@ ul {
     position: relative;
     margin-bottom: 34px;
     color: grey;
-    font-size: var(--font-size--small);
+    font-size: 1.4rem;
 }
 
 .post__name-divider {
@@ -291,7 +291,7 @@ ul {
     background-color: #b3b6bb;
     border-radius: 2px;
     color: white;
-    font-size: var(--font-size--small);
+    font-size: 1.4rem;
 }
 
 .post__tag--green {
@@ -304,7 +304,7 @@ ul {
     background-color: #ccc76c;
 }
 .post__tag--red {
-    background-color: #ccc76c;
+    background-color: #a37a7b;
 }
 
 /* conditions */
@@ -343,9 +343,9 @@ ul {
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-    /* html {
+    html {
         font-size: 16px;
-    } */
+    }
 
     .post__banner-img,
     .lnb__btn {
@@ -374,12 +374,41 @@ ul {
         height: 70px;
     }
 
+    .content__tab01 {
+        padding-left: 0;
+    }
+
     .post {
         width: 100%;
+        height: 304px;
         border-right: 0;
     }
 
-    .content__tab01 {
-        padding-left: 0;
+    .post__box {
+        margin: 30px 30px 0;
+    }
+
+    .post__tag-box {
+        width: 100%;
+    }
+
+    .post__tag {
+        margin-bottom: 10px;
+        padding: 0;
+        background-color: transparent;
+        color: grey;
+    }
+
+    .post__tag--green {
+        color: #86bbb2;
+    }
+    .post__tag--purple {
+        color: #9da3d7;
+    }
+    .post__tag--yellow {
+        color: #ccc76c;
+    }
+    .post__tag--red {
+        color: #a37a7b;
     }
 }
