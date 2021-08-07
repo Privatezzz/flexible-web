@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer>
+        function toggleLnb() {
+            const lnb = document.querySelector('.lnb');
+            const arrow = document.querySelector('.lnb__btn > img');
+            lnb.classList.toggle('display-none');
+            arrow.classList.toggle('rotate-arrow');
+        }
+
+        function tabActive() {
+            const btnWrapper = document.querySelector('.content__btn-wrapper');
+            btnWrapper.addEventListener('click', (e) => {
+                const targetBtn = e.target;
+                const tabBtn01 = document.querySelector('.content__btn-tab01');
+                const tabBtn02 = document.querySelector('.content__btn-tab02');
+                const tab01 = document.querySelector('.content__tab01');
+                const tab02 = document.querySelector('.content__tab02');
+                if (targetBtn.classList[1] == 'tab-active') {
+                    return
+                } else {
+                    tabBtn01.classList.toggle('tab-active');
+                    tabBtn02.classList.toggle('tab-active');
+                    tab01.classList.toggle('display-none');
+                    tab02.classList.toggle('display-none');
+                }
+            })
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- header block -->
+        <header class="header">
+            <a href="index.html" target="blank">
+                <h1 class="header__logo img-font"></h1>
+            </a>
+            <button class="header__btn-lnb--mobile">
+                <div class="btn-burger"></div>
+                <div class="btn-burger btn-burger-center-line"></div>
+                <div class="btn-burger"></div>
+            </button>
+        </header>
+
+        <!-- contents block -->
+        <section class="contents">
+            <!-- lnb block -->
+            <aside class="lnb display-none">
+                <ul class="lnb__category-wrapper">
+                    <li class="lnb__cate-title img-font"></li>
+                    <li class="lnb__cate01 img-font"></li>
+                    <li class="lnb__cate02 img-font"></li>
+                </ul>
+                <ul class="lnb__tags-wrapper">
+                    <li class="lnb__tag-title img-font"></li>
+                    <li class="lnb__tag01 img-font"></li>
+                    <li class="lnb__tag02 img-font"></li>
+                    <li class="lnb__tag03 img-font"></li>
+                    <li class="lnb__tag04 img-font"></li>
+                </ul>
+            </aside>
+            <button class="lnb__btn" onclick="toggleLnb()">
+                <img src="imgs/pc/toggle_arrow.png" alt="toggle arrow">
+            </button>
+            <div class="content">
+                <h2 class="content__title img-font"></h2>
+                <div class="content__btn-wrapper">
+                    <button class="content__btn-tab01 tab-active" onclick="tabActive()">인기 블로그</button>
+                    <button class="content__btn-tab02" onclick="tabActive()">인기 스토리</button>
+                </div>
+                <div class="content__tab01">
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img01" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <img src="imgs/pc/ico_new.png" alt="new icon">
+                            <div class="post__blog-name">
+                                <span>blog201Q</span>
+                                <span class="post__name-divider"></span>
+                                <span>키미</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img02" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <img src="imgs/pc/ico_hot.png" alt="new icon">
+                            <div class="post__blog-name">
+                                <span>blog201Q</span>
+                                <span class="post__name-divider"></span>
+                                <span>키미</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                                <span class="post__tag post__tag--green">#상위1%부지러너</span>
+                                <span class="post__tag post__tag--purple">#상위1%댓글부자</span>
+                                <span class="post__tag post__tag--yellow">#친절한답글러</span>
+                                <span class="post__tag post__tag--red">#10월이슈포스트</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img03" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <div class="post__blog-name">
+                                <span>blog201Q</span>
+                                <span class="post__name-divider"></span>
+                                <span>키미</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img04" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <div class="post__blog-name">
+                                <span>한국콘텐츠진흥원 상상발전소</span>
+                                <span class="post__name-divider"></span>
+                                <span>초이</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img05" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <div class="post__blog-name">
+                                <span>한국콘텐츠진흥원 상상발전소</span>
+                                <span class="post__name-divider"></span>
+                                <span>초이</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                                <span class="post__tag post__tag--red">#10월이슈포스트</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img06" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <div class="post__blog-name">
+                                <span>한국콘텐츠진흥원 상상발전소</span>
+                                <span class="post__name-divider"></span>
+                                <span>초이</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img07" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <div class="post__blog-name">
+                                <span>한국콘텐츠진흥원 상상발전소</span>
+                                <span class="post__name-divider"></span>
+                                <span>초이</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <a class="post__banner-img post__banner-img08" href="https://www.tistory.com/" target="blank"></a>
+                        <div class="post__box">
+                            <a href="#" target="blank">
+                                <h3 class="post__title">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</h3>
+                            </a>
+                            <div class="post__blog-name">
+                                <span>한국콘텐츠진흥원 상상발전소</span>
+                                <span class="post__name-divider"></span>
+                                <span>초이</span>
+                            </div>
+                            <div class="post__tag-box">
+                                <span class="post__tag">#국내여행블로그</span>
+                                <span class="post__tag">#100만방문자</span>
+                                <span class="post__tag">#9년차블로그</span>
+                                <span class="post__tag post__tag--green">#상위1%부지러너</span>
+                                <span class="post__tag post__tag--yellow">#친절한답글러</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="content__tab02 display-none">
+                    <article class="post">
+                        
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer block -->
+        <footer class="footer">
+            <address class="footer__copyright">Copyright (c) dk techin All rights reserved.</address>
+        </footer>
+    </div>
+</body>
+</html>
