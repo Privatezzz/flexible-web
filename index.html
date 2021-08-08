@@ -40,6 +40,25 @@
                 }
             })
         };
+
+        function btnBanner() {
+            const btnLeft = document.querySelector('.banner-group__btn-left');
+            const btnRight = document.querySelector('.banner-group__btn-right');
+            const bannerImg01 = document.querySelector('.banner-group_banner-img01');
+            const bannerImg02 = document.querySelector('.banner-group_banner-img02');
+            const bannerImg03 = document.querySelector('.banner-group_banner-img03');
+            btnLeft.addEventListener('click', () => {
+                if (bannerImg01.style.transoform)
+                bannerImg01.style.transform = "translateX(-1.6%)";
+                bannerImg02.style.transform = "translateX(-1.6%)";
+                bannerImg03.style.transform = "translateX(-1.6%)";
+            });
+            btnRight.addEventListener('click', () => {
+                bannerImg01.style.transform = "translateX(-208.4%)";
+                bannerImg02.style.transform = "translateX(-208.4%)";
+                bannerImg03.style.transform = "translateX(-208.4%)";
+            });
+        }
     </script>
 </head>
 <body>
@@ -278,6 +297,97 @@
                                 </a>
                             </article>
                         </div>
+                    </article>
+                    <!-- two-layer-group block -->
+                    <article class="two-layer-group">
+                        <div class="two-layer-group__box">
+                            <div class="two-layer-group__title01 img-font"></div>
+                            <ul>
+                                <li class="two-layer-group__list">
+                                    <span class="two-layer-group__number">1</span>
+                                    <a class="two-layer-group__text" href="https://map.kakao.com/" target="blank">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</a>
+                                    <span class="two-layer-group__rating-base" alt="rating base">
+                                        <span class="two-layer-group__rating-fill" style="width: 100%;" alt="rating fill"></span>
+                                    </span>
+                                </li>
+                                <li class="two-layer-group__list">
+                                    <span class="two-layer-group__number">2</span>
+                                    <a class="two-layer-group__text" href="https://map.kakao.com/" target="blank">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</a>
+                                    <span class="two-layer-group__rating-base" alt="rating base">
+                                        <span class="two-layer-group__rating-fill" style="width: 70%;" alt="rating fill"></span>
+                                    </span>
+                                </li>
+                                <li class="two-layer-group__list">
+                                    <span class="two-layer-group__number">3</span>
+                                    <a class="two-layer-group__text" href="https://map.kakao.com/" target="blank">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</a>
+                                    <span class="two-layer-group__rating-base" alt="rating base">
+                                        <span class="two-layer-group__rating-fill" style="width: 50%;" alt="rating fill"></span>
+                                    </span>
+                                </li>
+                                <li class="two-layer-group__list">
+                                    <span class="two-layer-group__number">4</span>
+                                    <a class="two-layer-group__text" href="https://map.kakao.com/" target="blank">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</a>
+                                    <span class="two-layer-group__rating-base" alt="rating base">
+                                        <span class="two-layer-group__rating-fill" style="width: 30%;" alt="rating fill"></span>
+                                    </span>
+                                </li>
+                                <li class="two-layer-group__list">
+                                    <span class="two-layer-group__number">5</span>
+                                    <a class="two-layer-group__text" href="https://map.kakao.com/" target="blank">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</a>
+                                    <span class="two-layer-group__rating-base" alt="rating base">
+                                        <span class="two-layer-group__rating-fill" style="width: 9%;" alt="rating fill"></span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="two-layer-group__box">
+                            <div class="two-layer-group__title02 img-font"></div>
+                            <div class="two-layer-group__cont-box">
+                                <div class="two-layer-group__cont-box01">
+                                    <p class="two-layer-group__tag-title">#국내여행블로그</p>
+                                    <figure class="two-layer-group__cont01">
+                                        <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-left.png" alt="left grey arrow">
+                                        <a class="two-layer-group__img two-layer-group__img01" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <a class="two-layer-group__img two-layer-group__img02" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <a class="two-layer-group__img two-layer-group__img03" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <a class="two-layer-group__img two-layer-group__img04" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <a class="two-layer-group__img two-layer-group__img05" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-right.png" alt="right grey arrow">
+                                    </figure>
+                                </div>
+                                <div class="two-layer-group__cont-box02">
+                                    <p class="two-layer-group__tag-title">#100만방문자</p>
+                                    <figure class="two-layer-group__cont02">
+                                        <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-left.png" alt="left grey arrow">
+                                        <a class="two-layer-group__img two-layer-group__img06" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <p class="two-layer-group__text02">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</p>
+                                        <a class="two-layer-group__img two-layer-group__img07" href="https://www.kakaocorp.com/page/service/service/KakaoT" target="blank"></a>
+                                        <p class="two-layer-group__text02">한 달에 5개 이상 포스팅할 정도면.. 블로그좀 하시는 군요?</p>
+                                        <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-right.png" alt="right grey arrow">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- banner-group block -->
+                    <article class="banner-group">
+                        <!-- <input id="banner-group__input-left" type="radio" name="slide"></input>
+                        <label class="banner-group__label-left" for="banner-group__input-left"></label>
+                        <input id="banner-group__input-right" type="radio" name="slide"></input>
+                        <label class="banner-group__label-right" for="banner-group__input-right"></label> -->
+                        <figure class="banner-group__banner-box">
+                            <button class="banner-group__btn-left" onclick="btnBanner()"></button>
+                            <button class="banner-group__btn-right" onclick="btnBanner()"></button>
+                            <a class="banner-group_banner-img banner-group_banner-img01" href="https://webtoon.kakao.com/" target="blank">
+                                <img src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            </a>
+                            <a class="banner-group_banner-img banner-group_banner-img02" href="https://webtoon.kakao.com/" target="blank">
+                                <img src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            </a>
+                            <a class="banner-group_banner-img banner-group_banner-img03" href="https://webtoon.kakao.com/" target="blank">
+                                <img src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            </a>
+                        </figure>
                     </article>
                 </div>
             </div>
