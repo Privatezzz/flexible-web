@@ -374,7 +374,6 @@ ul {
 }
 
 .two-layer-group__box {
-    /* width: 450px; */
     width: 50%;
     margin-right: 10px;
 }
@@ -424,7 +423,6 @@ ul {
 
 .two-layer-group__text {
     display: inline-block;
-    /* width: 250px; */
     width: 46%;
     margin-right: 80px;
     white-space: nowrap;
@@ -836,7 +834,7 @@ ul {
         overflow: hidden;
     }
 
-    @media screen and (min-width: 320px) and (max-width: 600px) {
+    @media screen and (min-width: 320px) and (max-width: 640px) {
         html {
             font-size: 10px;
         }
