@@ -403,51 +403,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 100%; */
-    margin: 0 16px;
-}
-
-.two-layer-group__img {
-    display: inline-block;
-    width: 66px;
-    height: 48px;
-    margin: 0 5px;
-    background: url(imgs/pc/banners/sprites-tap02_mini_banners.png) no-repeat;
-}
-
-.two-layer-group__img01 {
-    background-position: 0 0;
-}
-
-.two-layer-group__img02 {
-    background-position: -66px 0;
-}
-
-.two-layer-group__img03 {
-    background-position: -132px 0;
-}
-
-.two-layer-group__img04 {
-    background-position: -198px 0;
-}
-
-.two-layer-group__img05 {
-    background-position: -264px 0;
-}
-
-.two-layer-group__img06 {
-    background-position: -330px 0;
-}
-
-.two-layer-group__img07 {
-    background-position: -396px 0;
-}
-
-.two-layer-group__rating-base,
-.two-layer-group__rating-fill {
-    display: inline-block;
-    margin-right: 10px;
-    background: url(imgs/pc/star_rating.png) no-repeat;
+    width: 100%;
 }
 
 .two-layer-group__list-wrapper {
@@ -478,6 +434,13 @@ ul {
     text-overflow: ellipsis;
 }
 
+.two-layer-group__rating-base,
+.two-layer-group__rating-fill {
+    display: inline-block;
+    margin-right: 10px;
+    background: url(imgs/pc/star_rating.png) no-repeat;
+}
+
 .two-layer-group__rating-base {
     display: inline-block;
     width: 78px;
@@ -496,10 +459,10 @@ ul {
     height: 90px;
 }
 
-.two-layer-group__arrow-img {
-    width: 7px;
-    height: 12px;
-    margin: 0 10px;
+.two-layer-group__tag-title {
+    margin: 0 0 8px 16px;
+    padding-top: 12px;
+    color: var(--color-grey);
 }
 
 .two-layer-group__btn-arrow-left,
@@ -518,10 +481,25 @@ ul {
     background-position: -137px 0;
 }
 
-.two-layer-group__tag-title {
-    margin: 0 0 8px 16px;
-    padding-top: 12px;
-    color: var(--color-grey);
+.two-layer-group__img-wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.two-layer-group__img-wrapper02 {
+    display: flex;
+    overflow: hidden;
+}
+
+.two-layer-group__img-each-wrapper {
+    display: flex;
+}
+
+.two-layer-group__img {
+    display: inline-block;
+    width: 100%;
+    margin: 0 5px;
+    background: url(imgs/pc/banners/sprites-tap02_mini_banners.png) no-repeat;
 }
 
 .two-layer-group__text02 {
@@ -590,7 +568,6 @@ ul {
 .banner-group__input-wrapper {
     display: none;
 }
-
 
 .circle {
     display: inline-block;
@@ -816,17 +793,6 @@ ul {
         overflow: hidden;
     }
 
-    .two-layer-group__img-wrapper02 {
-        display: flex;
-        width: 100%;
-        background-color: red;
-        overflow: hidden;
-    }
-
-    .two-layer-group__img02 {
-        width: 100%;
-    }
-
     .two-layer-group__cont-box {
         display: flex;
     }
@@ -842,7 +808,27 @@ ul {
         overflow: hidden;
         width: 209px;
         height: 163px;
-        background-color: red;
+    }
+    
+    .two-layer-group__img-wrapper02 {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 209px;
+        height: 163px;
+    }
+
+    .two-layer-group__img-each-wrapper {
+        flex-direction: column;
+    }
+
+    .two-layer-group__img02 {
+        width: 128px;
+        height: 94px;
+    }
+
+    .two-layer-group__img-each-wrapper:last-child {
+        display: none;
     }
 
     .two-layer-group__img {
