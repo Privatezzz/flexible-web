@@ -490,6 +490,11 @@ ul {
     margin: 0 16px;
 }
 
+.two-layer-group__cont-wrapper {
+    background-color: #fff;
+    height: 90px;
+}
+
 .two-layer-group__arrow-img {
     margin: 0 10px;
 }
@@ -779,11 +784,7 @@ ul {
     }
 
     .two-layer-group__list {
-        background-color: #fff;;
-    }
-
-    .two-layer-group__cont-wrapper {
-        background-color: #fff;
+        
     }
 
     .two-layer-group__number {
@@ -802,6 +803,10 @@ ul {
         width: 100%;
         margin: 0;
         overflow: hidden;
+    }
+
+    .two-layer-group__cont-wrapper {
+        
     }
     
     /* banner-group */
@@ -830,6 +835,10 @@ ul {
     }
 
     @media screen and (min-width: 320px) and (max-width: 600px) {
+        html {
+            font-size: 10px;
+        }
+
         .banner-group__btn-left,
         .banner-group__btn-right {
             width: 21px;
