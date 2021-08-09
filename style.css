@@ -398,6 +398,15 @@ ul {
     background-position: -913px 0;
 }
 
+.two-layer-group__cont01,
+.two-layer-group__cont02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 16px;
+}
+
 .two-layer-group__img {
     display: inline-block;
     width: 66px;
@@ -482,21 +491,31 @@ ul {
     background-position: -78px 0;
 }
 
-.two-layer-group__cont01,
-.two-layer-group__cont02 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 16px;
-}
-
 .two-layer-group__cont-wrapper {
     background-color: #fff;
     height: 90px;
 }
 
 .two-layer-group__arrow-img {
+    width: 7px;
+    height: 12px;
     margin: 0 10px;
+}
+
+.two-layer-group__btn-arrow-left,
+.two-layer-group__btn-arrow-right {
+    width: 7px;
+    height: 12px;
+    margin: 0 10px;
+    background: url(imgs/pc/btn-arrow-sprites.png) no-repeat;
+}
+
+.two-layer-group__btn-arrow-left {
+    background-position: -128px 0;
+}
+
+.two-layer-group__btn-arrow-right {
+    background-position: -137px 0;
 }
 
 .two-layer-group__tag-title {
@@ -549,12 +568,10 @@ ul {
 }
 
 .banner-group__btn-left {
-    /* background: url(imgs/pc/btn-arrow_left.png) no-repeat; */
     background-position: 0 0;
 }
 
 .banner-group__btn-right {
-    /* background: url(imgs/pc/btn-arrow_right.png) no-repeat; */
     background-position: -41px 0;
 }
 
@@ -670,7 +687,7 @@ ul {
 
 @media screen and (max-width: 768px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .post__banner-img,
@@ -687,6 +704,10 @@ ul {
         height: 100px;
     }
 
+    .header__logo {
+        margin-top: 34px;
+    }
+
     /* content block */
     .content {
         width: 100vw;
@@ -694,7 +715,7 @@ ul {
     }
 
     .content__title {
-        margin-left: 40px;
+        margin-left: 6%;
     }
 
     .content__btn-tab01,
@@ -757,7 +778,11 @@ ul {
     }
 
     .post-group__text {
-        padding-right: 20px;
+        height: auto;
+        padding: 28px 28px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .post__box {
@@ -766,25 +791,16 @@ ul {
 
     /* two-layer-group block */
     .two-layer-group {
-        /* display: flex;
-        width: 94%;
-        margin: auto;
-        margin-bottom: 78px;
-        background-color: green;
-        font-size: 14px; */
         flex-direction: column;
     }
 
     .two-layer-group__box {
         width: 100%;
+        height: 240px;
     }
 
     .two-layer-group__box:first-child {
         margin-bottom: 40px;
-    }
-
-    .two-layer-group__list {
-        
     }
 
     .two-layer-group__number {
@@ -805,33 +821,33 @@ ul {
         overflow: hidden;
     }
 
-    .two-layer-group__cont-wrapper {
-        
-    }
-    
-    /* banner-group */
-    .banner-group {
-        width: 94%;
-        height: auto;
-        margin: auto;
-        overflow: visible;
-    }
-
-    .banner-group__banner-box {
-        width: auto;
-        height: auto;
-        overflow: hidden;
-    }
-
-    .banner-group__btn-box {
+    .two-layer-group__cont-box {
         display: flex;
-        justify-content: space-around;
-        top: 110%;
-        width: 50%;
     }
 
-    .banner-group__input-wrapper {
-        display: block;
+    .two-layer-group__cont-wrapper {
+        width: 50%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .two-layer-group__img-wrapper {
+        display: flex;
+        overflow: hidden;
+        width: 209px;
+        height: 163px;
+        background-color: red;
+    }
+
+    .two-layer-group__img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .two-layer-group__cont02 {
+        width: 100%;
+        overflow: hidden;
     }
 
     @media screen and (min-width: 320px) and (max-width: 600px) {
@@ -839,6 +855,31 @@ ul {
             font-size: 10px;
         }
 
+            /* banner-group */
+        .banner-group {
+            width: 94%;
+            height: auto;
+            margin: auto;
+            overflow: visible;
+        }
+
+        .banner-group__banner-box {
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .banner-group__btn-box {
+            display: flex;
+            justify-content: space-around;
+            top: 110%;
+            width: 50%;
+        }
+
+        .banner-group__input-wrapper {
+            display: block;
+        }
+        
         .banner-group__btn-left,
         .banner-group__btn-right {
             width: 21px;
