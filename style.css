@@ -29,7 +29,7 @@ ul {
 }
 
 .img-font {
-    background: url(imgs/pc/banners/img_font.png) no-repeat;
+    background: url(imgs/pc/img_sprite.png) no-repeat;
 }
 
 /* header block */
@@ -176,7 +176,7 @@ ul {
     display: flex;
 }
 
-/* tab01 block */
+    /* tab01 block */
 .content__btn-tab01,
 .content__btn-tab02 {
     width: 50%;
@@ -239,7 +239,7 @@ ul {
     background-position: -1200px 0;
 }
 .post__banner-img07 {
-    background-position: -1440x 0;
+    background-position: -1440px 0;
 }
 .post__banner-img08 {
     background-position: -1680px 0;
@@ -258,7 +258,6 @@ ul {
 .post__blog-name {
     position: relative;
     margin-bottom: 34px;
-    /* margin-bottom: 6%; */
     color: grey;
     font-size: 1.4rem;
 }
@@ -305,7 +304,6 @@ ul {
     width: 94%;
     margin: auto;
     margin-bottom: 60px;
-    /* background-color: red; */
 }
 
 .post-group__title {
@@ -438,20 +436,20 @@ ul {
 .two-layer-group__rating-fill {
     display: inline-block;
     margin-right: 10px;
-    background: url(imgs/pc/star_rating.png) no-repeat;
+    background: url(imgs/pc/img_sprite.png) no-repeat;
 }
 
 .two-layer-group__rating-base {
     display: inline-block;
     width: 78px;
     height: 13px;
-    background-position: 0 0;
+    background-position: -203px -30px;
 }
 
 .two-layer-group__rating-fill {
     width: 78px;
     height: 13px;
-    background-position: -78px 0;
+    background-position: -283px -30px;
 }
 
 .two-layer-group__cont-wrapper {
@@ -470,15 +468,15 @@ ul {
     width: 7px;
     height: 12px;
     margin: 0 10px;
-    background: url(imgs/pc/btn-arrow-sprites.png) no-repeat;
+    background: url(imgs/pc/img_sprite.png) no-repeat;
 }
 
 .two-layer-group__btn-arrow-left {
-    background-position: -128px 0;
+    background-position: -131px -31px;
 }
 
 .two-layer-group__btn-arrow-right {
-    background-position: -137px 0;
+    background-position: -140px -31px;
 }
 
 .two-layer-group__img-wrapper {
@@ -499,7 +497,6 @@ ul {
     display: inline-block;
     width: 100%;
     margin: 0 5px;
-    background: url(imgs/pc/banners/sprites-tap02_mini_banners.png) no-repeat;
 }
 
 .two-layer-group__text02 {
@@ -542,15 +539,15 @@ ul {
 .banner-group__btn-right {
     width: 41px;
     height: 41px;
-    background: url(imgs/pc/btn-arrow-sprites.png) no-repeat;
+    background: url(imgs/pc/img_sprite.png) no-repeat;
 }
 
 .banner-group__btn-left {
-    background-position: 0 0;
+    background-position: 0 -30px;
 }
 
 .banner-group__btn-right {
-    background-position: -41px 0;
+    background-position: -42px -30px;
 }
 
 .banner-group__btn-box {
@@ -742,14 +739,11 @@ ul {
 
     /* post-group block */
     .post-group {
-        /* width: 580px; */
         width: 90.64vw;
     }
     
     .post-group__grid {
-        /* grid-template-columns: repeat(2, 290px); */
         grid-template-columns: repeat(2, 45.32vw);
-        /* grid-template-rows: repeat(4, 211px); */
         grid-template-rows: repeat(4, 33vw);
         gap: 2px;
     }
@@ -847,7 +841,7 @@ ul {
             font-size: 10px;
         }
 
-            /* banner-group */
+        /* banner-group */
         .banner-group {
             width: 94%;
             height: auto;
@@ -879,11 +873,11 @@ ul {
         }
 
         .banner-group__btn-left {
-            background-position: -83px 0;
+            background-position: -85px -30px;
         }
 
         .banner-group__btn-right {
-            background-position: -104px 0;
+            background-position: -108px -30px;
         }
     }
 }
