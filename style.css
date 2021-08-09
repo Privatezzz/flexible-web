@@ -530,15 +530,17 @@ ul {
 .banner-group__btn-right {
     width: 41px;
     height: 41px;
-    background-size: 100%;
+    background: url(imgs/pc/btn-arrow-sprites.png) no-repeat;
 }
 
 .banner-group__btn-left {
-    background: url(imgs/pc/btn-arrow_left.png) no-repeat;
+    /* background: url(imgs/pc/btn-arrow_left.png) no-repeat; */
+    background-position: 0 0;
 }
 
 .banner-group__btn-right {
-    background: url(imgs/pc/btn-arrow_right.png) no-repeat;
+    /* background: url(imgs/pc/btn-arrow_right.png) no-repeat; */
+    background-position: -41px 0;
 }
 
 .banner-group__btn-box {
@@ -651,7 +653,7 @@ ul {
     background-color: #434343;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 16px;
     }
@@ -779,6 +781,7 @@ ul {
     /* banner-group */
     .banner-group {
         width: 94%;
+        height: auto;
         margin: auto;
         overflow: visible;
     }
@@ -791,12 +794,28 @@ ul {
 
     .banner-group__btn-box {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         top: 110%;
-        width: 40%;
+        width: 50%;
     }
 
     .banner-group__input-wrapper {
-        display: block
+        display: block;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        .banner-group__btn-left,
+        .banner-group__btn-right {
+            width: 21px;
+            height: 21px;
+        }
+
+        .banner-group__btn-left {
+            background-position: -83px 0;
+        }
+
+        .banner-group__btn-right {
+            background-position: -104px 0;
+        }
     }
 }
