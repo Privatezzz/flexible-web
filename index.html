@@ -6,60 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script defer>
-        function toggleLnb() {
-            const lnb = document.querySelector('.lnb');
-            const arrow = document.querySelector('.lnb__btn > img');
-            lnb.classList.toggle('display-none');
-            arrow.classList.toggle('rotate-arrow');
-        }
-
-        function toggleLnbMobile() {
-            const lnb = document.querySelector('.lnb');
-            const lnbBg = document.querySelector('.lnb-moblie-bg');
-            lnb.classList.toggle('display-none');
-            lnb.classList.toggle('lnb-mobile');
-            lnbBg.classList.toggle('display-none');
-        }
-
-        function tabActive() {
-            const btnWrapper = document.querySelector('.content__btn-wrapper');
-            btnWrapper.addEventListener('click', (e) => {
-                const targetBtn = e.target;
-                const tabBtn01 = document.querySelector('.content__btn-tab01');
-                const tabBtn02 = document.querySelector('.content__btn-tab02');
-                const tab01 = document.querySelector('.content__tab01');
-                const tab02 = document.querySelector('.content__tab02');
-                if (targetBtn.classList[1] == 'tab-active') {
-                    return
-                } else {
-                    tabBtn01.classList.toggle('tab-active');
-                    tabBtn02.classList.toggle('tab-active');
-                    tab01.classList.toggle('display-none');
-                    tab02.classList.toggle('display-none');
-                }
-            })
-        };
-
-        function btnBanner() {
-            const btnLeft = document.querySelector('.banner-group__btn-left');
-            const btnRight = document.querySelector('.banner-group__btn-right');
-            const bannerImg01 = document.querySelector('.banner-group_banner-img01');
-            const bannerImg02 = document.querySelector('.banner-group_banner-img02');
-            const bannerImg03 = document.querySelector('.banner-group_banner-img03');
-            btnLeft.addEventListener('click', () => {
-                if (bannerImg01.style.transoform)
-                bannerImg01.style.transform = "translateX(-1.6%)";
-                bannerImg02.style.transform = "translateX(-1.6%)";
-                bannerImg03.style.transform = "translateX(-1.6%)";
-            });
-            btnRight.addEventListener('click', () => {
-                bannerImg01.style.transform = "translateX(-208.4%)";
-                bannerImg02.style.transform = "translateX(-208.4%)";
-                bannerImg03.style.transform = "translateX(-208.4%)";
-            });
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -343,7 +289,7 @@
                         <div class="two-layer-group__box">
                             <div class="two-layer-group__title02 img-font"></div>
                             <div class="two-layer-group__cont-box">
-                                <div class="two-layer-group__cont-box01">
+                                <div class="two-layer-group__cont-wrapper">
                                     <p class="two-layer-group__tag-title">#국내여행블로그</p>
                                     <figure class="two-layer-group__cont01">
                                         <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-left.png" alt="left grey arrow">
@@ -355,7 +301,7 @@
                                         <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-right.png" alt="right grey arrow">
                                     </figure>
                                 </div>
-                                <div class="two-layer-group__cont-box02">
+                                <div class="two-layer-group__cont-wrapper">
                                     <p class="two-layer-group__tag-title">#100만방문자</p>
                                     <figure class="two-layer-group__cont02">
                                         <img class="two-layer-group__arrow-img" src="imgs/pc/grey_arrow-left.png" alt="left grey arrow">
@@ -376,17 +322,38 @@
                         <input id="banner-group__input-right" type="radio" name="slide"></input>
                         <label class="banner-group__label-right" for="banner-group__input-right"></label> -->
                         <figure class="banner-group__banner-box">
-                            <button class="banner-group__btn-left" onclick="btnBanner()"></button>
-                            <button class="banner-group__btn-right" onclick="btnBanner()"></button>
-                            <a class="banner-group_banner-img banner-group_banner-img01" href="https://webtoon.kakao.com/" target="blank">
+                            <!-- <a class="banner-group__banner-img banner-group__banner-img01" href="https://webtoon.kakao.com/" target="blank">
                                 <img src="imgs/pc/banners/bottom_banner.png" alt="banner">
                             </a>
-                            <a class="banner-group_banner-img banner-group_banner-img02" href="https://webtoon.kakao.com/" target="blank">
+                            <a class="banner-group__banner-img banner-group__banner-img02" href="https://webtoon.kakao.com/" target="blank">
                                 <img src="imgs/pc/banners/bottom_banner.png" alt="banner">
                             </a>
-                            <a class="banner-group_banner-img banner-group_banner-img03" href="https://webtoon.kakao.com/" target="blank">
+                            <a class="banner-group__banner-img banner-group__banner-img03" href="https://webtoon.kakao.com/" target="blank">
                                 <img src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            </a> -->
+
+                            <!-- <a href="https://webtoon.kakao.com/" target="blank">
+                                <img class="banner-group__banner-img banner-group__banner-img01" src="imgs/pc/banners/bottom_banner.png" alt="banner">
                             </a>
+                            <a href="https://webtoon.kakao.com/" target="blank">
+                                <img class="banner-group__banner-img banner-group__banner-img02" src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            </a>
+                            <a href="https://webtoon.kakao.com/" target="blank">
+                                <img class="banner-group__banner-img banner-group__banner-img03" src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            </a> -->
+
+                            <img class="banner-group__banner-img banner-group__banner-img01" src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            <img class="banner-group__banner-img banner-group__banner-img02" src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            <img class="banner-group__banner-img banner-group__banner-img03" src="imgs/pc/banners/bottom_banner.png" alt="banner">
+                            <div class="banner-group__btn-box">
+                                <button class="banner-group__btn-left"></button>
+                                <div class="banner-group__input-wrapper">
+                                    <div class="circle circle01"></div>
+                                    <div class="circle circle02 checked"></div>
+                                    <div class="circle circle03"></div>
+                                </div>
+                                <button class="banner-group__btn-right"></button>
+                            </div>
                         </figure>
                     </article>
                 </div>
@@ -397,6 +364,109 @@
         <footer class="footer">
             <address class="footer__copyright">Copyright (c) dk techin All rights reserved.</address>
         </footer>
+
+        <!-- script -->
+        <script>
+            function toggleLnb() {
+                const lnb = document.querySelector('.lnb');
+                const arrow = document.querySelector('.lnb__btn > img');
+                lnb.classList.toggle('display-none');
+                arrow.classList.toggle('rotate-arrow');
+            }
+
+            function toggleLnbMobile() {
+                const lnb = document.querySelector('.lnb');
+                const lnbBg = document.querySelector('.lnb-moblie-bg');
+                lnb.classList.toggle('display-none');
+                lnb.classList.toggle('lnb-mobile');
+                lnbBg.classList.toggle('display-none');
+            }
+    
+            function tabActive() {
+                const btnWrapper = document.querySelector('.content__btn-wrapper');
+                btnWrapper.addEventListener('click', (e) => {
+                    const targetBtn = e.target;
+                    const tabBtn01 = document.querySelector('.content__btn-tab01');
+                    const tabBtn02 = document.querySelector('.content__btn-tab02');
+                    const tab01 = document.querySelector('.content__tab01');
+                    const tab02 = document.querySelector('.content__tab02');
+                    if (targetBtn.classList[1] == 'tab-active') {
+                        return
+                    } else {
+                        tabBtn01.classList.toggle('tab-active');
+                        tabBtn02.classList.toggle('tab-active');
+                        tab01.classList.toggle('display-none');
+                        tab02.classList.toggle('display-none');
+                    }
+                })
+            };
+
+            const bannerImg01 = document.querySelector('.banner-group__banner-img01');
+            const bannerImg02 = document.querySelector('.banner-group__banner-img02');
+            const bannerImg03 = document.querySelector('.banner-group__banner-img03');
+            document.addEventListener('click', (e) => {
+                const targetBtn = e.target.className;
+                const position = bannerImg01.style.transform;
+                const circle01 = document.querySelector('.circle01');
+                const circle02 = document.querySelector('.circle02');
+                const circle03 = document.querySelector('.circle03');
+                if (targetBtn == 'banner-group__btn-left') {
+                    switch (position) {
+                        case 'translate(-1.6%)':
+                            bannerImg01.style.transform = 'translate(-208.4%)';
+                            bannerImg02.style.transform = 'translate(-208.4%)';
+                            bannerImg03.style.transform = 'translate(-208.4%)';
+                            circle01.classList.remove('checked');
+                            circle02.classList.remove('checked');
+                            circle03.classList.toggle('checked');
+                            break;
+                        case 'translate(-208.4%)':
+                            bannerImg01.style.transform = 'translate(-105%)';
+                            bannerImg02.style.transform = 'translate(-105%)';
+                            bannerImg03.style.transform = 'translate(-105%)';
+                            circle01.classList.remove('checked');
+                            circle02.classList.toggle('checked');
+                            circle03.classList.remove('checked');
+                            break;
+                        default:
+                            bannerImg01.style.transform = 'translate(-'+(105-103.4)+"%)";
+                            bannerImg02.style.transform = 'translate(-'+(105-103.4)+"%)";
+                            bannerImg03.style.transform = 'translate(-'+(105-103.4)+"%)";
+                            circle01.classList.toggle('checked');
+                            circle02.classList.remove('checked');
+                            circle03.classList.remove('checked');
+                            break;
+                    }
+                } else if (targetBtn == 'banner-group__btn-right') {
+                    switch (position) {
+                        case 'translate(-1.6%)':
+                            bannerImg01.style.transform = 'translate(-105%)';
+                            bannerImg02.style.transform = 'translate(-105%)';
+                            bannerImg03.style.transform = 'translate(-105%)';
+                            circle01.classList.remove('checked');
+                            circle02.classList.toggle('checked');
+                            circle03.classList.remove('checked');
+                            break;
+                        case 'translate(-208.4%)':
+                            bannerImg01.style.transform = 'translate(-1.6%)';
+                            bannerImg02.style.transform = 'translate(-1.6%)';
+                            bannerImg03.style.transform = 'translate(-1.6%)';
+                            circle01.classList.toggle('checked');
+                            circle02.classList.remove('checked');
+                            circle03.classList.remove('checked');
+                            break;
+                        default:
+                            bannerImg01.style.transform = 'translate(-208.4%)';
+                            bannerImg02.style.transform = 'translate(-208.4%)';
+                            bannerImg03.style.transform = 'translate(-208.4%)';
+                            circle01.classList.remove('checked');
+                            circle02.classList.remove('checked');
+                            circle03.classList.toggle('checked');
+                            break;
+                    }
+                }
+            });
+        </script>
     </div>
 </body>
 </html>
