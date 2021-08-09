@@ -404,7 +404,7 @@ ul {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0 16px;
+    /* margin: 0 16px; */
 }
 
 .two-layer-group__img {
@@ -813,12 +813,18 @@ ul {
 
     .two-layer-group__cont01,
     .two-layer-group__cont02 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0;
         overflow: hidden;
+    }
+
+    .two-layer-group__img-wrapper02 {
+        display: flex;
+        width: 100%;
+        background-color: red;
+        overflow: hidden;
+    }
+
+    .two-layer-group__img02 {
+        width: 100%;
     }
 
     .two-layer-group__cont-box {
